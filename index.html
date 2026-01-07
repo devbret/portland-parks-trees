@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ff4a3384-baa9-4bc2-94c9-6bff4e3d3ea0.png"
+      type="image/x-icon"
+    />
+    <title>Portland Parks Trees - Bret Bernhoft</title>
+    <meta
+      name="description"
+      content="View data about trees in parks from Portland, Oregon as an interactive web-based heatmap."
+    />
+    <meta name="author" content="Bret Bernhoft" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <div class="panel left">
+      <h1>
+        <span>Quick Filters</span>
+        <span id="countPill" class="pill">0 / 0</span>
+      </h1>
+
+      <div class="group">
+        <h2>Heatmap</h2>
+
+        <label for="radius">Radius</label>
+        <div class="inline">
+          <input
+            id="radius"
+            type="number"
+            min="5"
+            max="80"
+            step="1"
+            value="22"
+          />
+        </div>
+
+        <label for="blur">Blur</label>
+        <div class="inline">
+          <input id="blur" type="number" min="0" max="60" step="1" value="18" />
+        </div>
+
+        <label for="maxZoom">Max Zoom</label>
+        <div class="inline">
+          <input
+            id="maxZoom"
+            type="number"
+            min="1"
+            max="20"
+            step="1"
+            value="16"
+          />
+        </div>
+      </div>
+
+      <div class="group">
+        <h2>Species</h2>
+
+        <label for="Common_name">Common Name</label>
+        <select id="Common_name" multiple></select>
+      </div>
+
+      <div class="group">
+        <h2>Inventory Date</h2>
+
+        <div class="rangeGrid">
+          <div>
+            <label for="YearMin">Year Min</label>
+            <input id="YearMin" type="number" />
+          </div>
+          <div>
+            <label for="YearMax">Year Max</label>
+            <input id="YearMax" type="number" />
+          </div>
+        </div>
+      </div>
+
+      <div class="group">
+        <h2>Categorical</h2>
+
+        <label for="Condition">Condition</label>
+        <select id="Condition" multiple></select>
+
+        <label for="Native">Native</label>
+        <select id="Native" multiple></select>
+
+        <label for="Size">Size</label>
+        <select id="Size" multiple></select>
+
+        <div class="btns">
+          <button id="resetBtn" class="danger">Reset filters</button>
+          <button id="fitBtn">Fit to filtered</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel right">
+      <h1>
+        <span>All Other Filters</span>
+      </h1>
+
+      <div class="group">
+        <h2>Numeric Ranges</h2>
+        <div id="numericRanges"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
