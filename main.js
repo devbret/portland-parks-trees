@@ -100,9 +100,9 @@ function uniqueSorted(values) {
   const arr = Array.from(
     new Set(
       values.filter(
-        (v) => v !== null && v !== undefined && String(v).trim() !== ""
-      )
-    )
+        (v) => v !== null && v !== undefined && String(v).trim() !== "",
+      ),
+    ),
   );
   if (arr.every((v) => !isNaN(Number(v))))
     return arr.sort((a, b) => Number(a) - Number(b));
@@ -133,7 +133,7 @@ function debounce(fn, ms) {
 
 const map = L.map("map", { preferCanvas: true }).setView(
   DEFAULT_CENTER,
-  DEFAULT_ZOOM
+  DEFAULT_ZOOM,
 );
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -205,7 +205,7 @@ function buildNumericRangeControls() {
     hdr.className = "inline";
     hdr.innerHTML = `
           <div style="font-weight:700;font-size:12px;color:#111;">${escapeHtml(
-            prettyLabel(field)
+            prettyLabel(field),
           )}</div>
           <div class="pill">${stats.min ?? "?"} – ${stats.max ?? "?"}</div>
         `;
@@ -419,7 +419,7 @@ async function loadTrees() {
   } catch (err) {
     console.error(err);
     statusEl.innerHTML = `<span class="error">Error:</span> ${escapeHtml(
-      err.message
+      err.message,
     )}`;
   }
 }
