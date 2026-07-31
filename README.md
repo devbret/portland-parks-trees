@@ -2,7 +2,7 @@
 
 ![Screenshot of a heatmap displaying trees in Portland, Oregon city parks.](https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9547801e-223a-4179-ab16-0fe5a0b3f76d.png)
 
-Transform the Portland parks tree inventory into JSON and render the data as an interactive heatmap.
+Provides tools to process and visualize Portland's tree inventory as an interactive heatmap by combining a Python backend for data transformation with a modern JavaScript frontend.
 
 ## Application Overview
 
@@ -20,7 +20,7 @@ Below are the required software programs and instructions for installing and usi
 
 - [Python](https://www.python.org/downloads/)
 
-### Steps
+### Setup Steps
 
 1. Install the above programs
 
@@ -44,11 +44,15 @@ Below are the required software programs and instructions for installing and usi
 
 11. Access the app in a browser: `http://localhost:8000`
 
-12. When finished using the app: `CTRL + C`
+12. When finished, close the HTTP server: `CTRL + C`
 
 13. Exit the virtual environment: `deactivate`
 
 ## Other Considerations
+
+This section highlights the specific technical skills and competencies demonstrated through this project, including data sourcing, backend processing with Python and frontend visualization using modern web development tools. As well as information about the license attached to this repo.
+
+### Abilities Demonstrated
 
 This project repo is intended to demonstrate an ability to do the following:
 
@@ -57,5 +61,9 @@ This project repo is intended to demonstrate an ability to do the following:
 - Use Python to transform the raw data into a useable structure and format
 
 - Visualize the Python output in an interactive and engaging fashion using modern web development tools
+
+### License Information
+
+This project is licensed under the MIT License, which allows for broad use, modification and distribution of the software. By choosing this license, you are provided a permissive framework while retaining ownership, ensuring that the software can be freely contributed to or built upon for both personal and commercial purposes.
 
 If you have any questions or would like to collaborate, please reach out either on GitHub or via [my website](https://bretbernhoft.com/).
