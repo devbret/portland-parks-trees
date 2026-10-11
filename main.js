@@ -12,7 +12,10 @@ const CATEGORICAL_FIELDS = [
 ];
 
 const NUMERIC_FIELDS = [
+  "DBH",
   "TreeHeight",
+  "CrownWidthNS",
+  "CrownWidthEW",
   "CrownBaseHeight",
   "Structural_Value",
   "Carbon_Storage_lb",
